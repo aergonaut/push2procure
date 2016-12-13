@@ -55,8 +55,11 @@ provider:
 #    - exclude-me-dir/**
 
 functions:
-  hello:
-    handler: handler.hello
+  procure:
+    handler: handler.procure
+    environment:
+      API_HOST: ${env:API_HOST}
+      API_KEY: ${env:API_KEY}
 
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
